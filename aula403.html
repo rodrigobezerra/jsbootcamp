@@ -7,32 +7,37 @@
     <title>JS Bootcamp 4.03</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
-        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
         crossorigin="anonymous">
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-    
-</head>
-<body>
-    <h3><b>Basic Calculator</b></h3>
-    <button onclick="start('+')" class="btn btn-sm btn-primary" 
-        style="font-weight: bold; font-size: 1em;"> + </button>
-    <button onclick="start('-')" class="btn btn-sm btn-danger" 
-        style="font-weight: bold; font-size: 1em;"> - </button>
-    <button onclick="start('*')" class="btn btn-sm btn-warning" 
-        style="font-weight: bold; font-size: 1em;"> x </button>
-    <button onclick="start('/')" class="btn btn-sm btn-success" 
-        style="font-weight: bold; font-size: 1em;"> ÷ </button>
 
-    <br/>
-    <div id="output" style="margin-top: 20px; padding: 4px; display: inline-block;"></div>
+</head>
+
+<body>
+    <div class="panel panel-primary" style="margin: auto; width: 25%;">
+        <div class="panel-heading">
+            <h3 class="panel-title"> Basic Calculator </h3>
+        </div>
+        <div class="panel-body" style="margin: auto; width: 55%;" >
+            <button onclick="start('+')" class="btn btn-sm btn-primary" style="font-weight: bold; font-size: 1em; width: 35px;"> +
+            </button>
+            <button onclick="start('-')" class="btn btn-sm btn-danger" style="font-weight: bold; font-size: 1em; width: 35px;"> -
+            </button>
+            <button onclick="start('*')" class="btn btn-sm btn-warning" style="font-weight: bold; font-size: 1em; width: 35px;"> x
+            </button>
+            <button onclick="start('/')" class="btn btn-sm btn-success" style="font-weight: bold; font-size: 1em; width: 35px;"> ÷
+            </button>
+        </div>
+
+        <hr>
+
+        <div id="output" style="margin-top:10px; padding: 4px; display: inline-block;"></div>
+    </div>
 
     <script src="main403.js"></script>
 </body>
