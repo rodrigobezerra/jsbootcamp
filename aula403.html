@@ -27,18 +27,25 @@
     
 </head>
 <body>
-    <h3><b>Basic Calculator</b></h3>
-    <button onclick="start('+')" class="btn btn-sm btn-primary" 
-        style="font-weight: bold; font-size: 1em;"> + </button>
-    <button onclick="start('-')" class="btn btn-sm btn-danger" 
-        style="font-weight: bold; font-size: 1em;"> - </button>
-    <button onclick="start('*')" class="btn btn-sm btn-warning" 
-        style="font-weight: bold; font-size: 1em;"> x </button>
-    <button onclick="start('/')" class="btn btn-sm btn-success" 
-        style="font-weight: bold; font-size: 1em;"> ÷ </button>
+    <div class="panel panel-primary" style="margin: auto; width: 25%;">
+        <div class="panel-heading">
+            <h3 class="panel-title"> Basic Calculator </h3>
+        </div>
+        <div class="panel-body" style="margin: auto; width: 55%;" >
+            <button onclick="start('+')" class="btn btn-sm btn-primary" style="font-weight: bold; font-size: 1em; width: 35px;"> +
+            </button>
+            <button onclick="start('-')" class="btn btn-sm btn-danger" style="font-weight: bold; font-size: 1em; width: 35px;"> -
+            </button>
+            <button onclick="start('*')" class="btn btn-sm btn-warning" style="font-weight: bold; font-size: 1em; width: 35px;"> x
+            </button>
+            <button onclick="start('/')" class="btn btn-sm btn-success" style="font-weight: bold; font-size: 1em; width: 35px;"> ÷
+            </button>
+        </div>
 
-    <br/>
-    <div id="output" style="margin-top: 20px; padding: 4px; display: inline-block;"></div>
+        <hr>
+
+        <div id="output" style="margin-top:10px; padding: 4px; display: inline-block;"></div>
+    </div>
 
     <script src="main403.js"></script>
 </body>
