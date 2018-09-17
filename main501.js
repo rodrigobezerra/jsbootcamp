@@ -1,30 +1,44 @@
 // only works if you execute inside the body
 
-// starting...
-var n1 = parseFloat(prompt("What's the width of the triangle:"));
-while (isNaN(n1)) {
-    var n1 = prompt("Invalid number! Please, type again your number:");
-    n1 = parseFloat(n1);
+iniciar();
+
+function iniciar() {
+    // starting...
+    var l = prompt("What's the width of the triangle:");
+    l = parseFloat(l);
+
+    var a = prompt("What's the height of the triangle:");
+    a = parseFloat(a);
+    
+    try {
+        var msg = calcularArea(l,a);
+    } catch (e) {
+        msg = e;
+    }
+
+    escrever(msg);
+
 }
 
-var n1 = parseFloat(prompt("What's the height of the triangle:"));
-while (isNaN(n1)) {
-    var n1 = prompt("Invalid number! Please, type again your number:");
-    n1 = parseFloat(n1);
-}
-
-
-function escrever(){
+function escrever(mensagem) {
     var output = document.querySelector("#output");
-    output.innerHTML = n1;
+    output.innerHTML = mensagem;
 }
 
-/*
- *
- */
-function mostrarArea(l) {
-    alert(l);
+function calcularArea(l,a) {
+    
+    
+    if (l === undefined || a === undefined){
+        throw new Error("'calcularArea' needs two numbers to complete the triangle calculus!");
+    }
+
+    if (isNaN(l) || isNaN(a)) {
+        throw new Error("Only numbers please!");
+    }
+
+    var area = l * a;
+    var mensagem = "<i> The area of the triangle is: <b>" + l + " * " + a + " = " + area + "</b></i>";
     mensagem += "<br><b>THAT'S ALL FOLKS \\o/<b>";
 
-    this.output.innerHTML = mensagem;
+    return mensagem;
 }
