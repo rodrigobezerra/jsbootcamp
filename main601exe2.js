@@ -6,16 +6,23 @@ function iniciar() {
 
     var msg = "Numbers: {" + nums + "}";
 
+    var result = somaosPares(nums);
+
+    msg += "<br>The Sum of all evens is: " + result.toString();
+
+    escrever(msg);
+}
+
+function somaDosPares(arr){
+    
     var sum = 0;
     for (let i = 0; i<= nums.length; i++) {
-        if (nums[i]%2 == 0){
+        if (!isNaN(nums[i]) && nums[i]%2 === 0){
             sum += nums[i];
         }
     }
 
-    msg += "<br>The Sum of all evens is: " + sum.toString();
-
-    escrever(msg);
+    return sum;
 }
 
 function escrever(mensagem) {
