@@ -19,7 +19,7 @@ function iniciar() {
 
     var products = new Array(product1, product2, product3);
 
-    var msg = "Welcome to our grocery store, today we have:";
+    var msg = "Welcome to our grocery store, today we have:<br>";
 
     msg += listProducts(products);
 
@@ -30,13 +30,13 @@ function iniciar() {
 function listProducts(arr){
     
     var msg = "";
-    for (let i = 0; i<= arr.length; i++) {
+    arr.forEach(function (prod) {
         //if (!isNaN(nums[i]) && nums[i]%2 === 0){
-            msg += (i + 1) +".Product: " + arr[i].name + "<br>";
-            msg += "<li class='a'>Price: " + arr[i].price + "<li>";
-            msg += "<li class='a'>Quantity: " + arr[i].quantity + "<li>";
+            msg += "<br><b>" + (arr.indexOf(prod) + 1) + ".Product: " + prod.name + "</b>";
+            msg += "<li class='a'>Price: " + prod.price + "</li>";
+            msg += "<li class='a'>Quantity: " + prod.quantity + "</li>";
         //}
-    }
+    });
 
     return msg;
 }
